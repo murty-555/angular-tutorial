@@ -1,0 +1,18 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>class binding works!</p>
+<hr>
+<h3 class="textColor">Regular class</h3>
+<h3 class="textSize">Regular class</h3>
+
+<h3 [class]="myText">Class binding</h3>
+<h3 class="textColor textSize">Regular multiple classes</h3>
+
+<h3 [class]="myClassGrp">Class binding for multiple classes with group</h3>
+<h3 [ngClass]="myClassGrp">Class binding for multiple classes with ngClass</h3>
+
+<h3 [class]="isRequired ? 'textColor' : 'textSize'">Conditional class binding</h3>
+
+<h3 [class.textSize]="isRequired">Class binding with . operator</h3>
+<br>
+<h5 [ngClass]="myStyleGrp">Hover on me</h5>

@@ -1,0 +1,12 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<h2>Parent Component!</h2>
+<!-- <h3>{{dataFromChild}}</h3>
+<app-child [pPostman]="pData" (cData)="dataFromChild = $event"></app-child> -->
+<h4 *ngFor="let data of childrenData | keyvalue">
+    {{data.key}}:  {{data.value}}
+</h4>
+<app-child [pObjPostman]="pObjData" (childData)="childrenData = $event"></app-child>
+<app-child [messageFromParent]="parentMessage" (childMessage)=" msgFromChild = $event"></app-child>
+{{msgFromChild}}
+

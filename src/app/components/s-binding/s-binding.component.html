@@ -1,0 +1,9 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>Style binding works!</p>
+<h3 [style.color]="myColor">Hello World!</h3>
+<h3 [style.color]="'blue'">Hello World!</h3>
+<h3 [style.fontSize]="isRequired ? '30px' : '50px'">Hello World!</h3>
+<h3 [style.fontStyle]="'italic'">Hello World!</h3>
+
+<h3 [ngStyle]="myStyleGroup">Group of styles</h3>

@@ -1,0 +1,15 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>property binding works!</p>
+
+<input type="text" value="Enter text">
+<input type="text" value={{name}} id={{id}}>
+<input type="text" [value]="name" [id]="id">
+
+<input type="text" [value]="name" [id]="id" disabled>
+<input type="text" [value]="name" [id]="id" disabled={{isDisabled}}> 
+<input type="text" [value]="'Enter your name'" [id]="id" [disabled]="isDisabled"> 
+<div>
+    <input type="text" value="nothing" [disabled]="false">
+</div>
+

@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+p{
+    color: cadetblue;
+    text-align: center;
+}
+ul li{
+    cursor: pointer;
+}
+ul li:hover{
+    color: burlywood;
+}
+ul li:hover{
+    color: burlywood;
+}
+.active{
+    color: darkcyan;
+}
+

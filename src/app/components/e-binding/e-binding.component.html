@@ -1,0 +1,15 @@
+
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br><p>Event binding works!</p>
+
+<button class="btn btn-info" (click)="onClick()">Click me</button>
+<button class="btn btn-success" (dblclick)="onDblClick()">Double click me</button>
+<button class="btn btn-danger" (mouseover)="onMouseOver()">Mouse over</button>
+<button class="btn btn-dark" (mouseout)="onMouseOut()">Mouse out</button>
+<button class="btn btn-primary" (mousemove)="onMouseMove()">Mouse move</button>
+<hr>
+<input type="text" value="key down" (keydown)="kDown()">
+<input type="text" value="key up" (keyup)="kUp()">
+<input type="text" value="key press" (keypress)="kPress()">
+<input type="text" value="focus" (focus)="onFocus()">
+<input type="text" value="blur" ((blur))="onBlur()">

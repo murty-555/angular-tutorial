@@ -1,0 +1,35 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<h2>pipes works!</h2><br>
+<h3>{{name}}</h3>
+<h3>{{name | uppercase}}</h3>
+<h3>{{name | titlecase}}</h3>
+<h3>{{name | slice: 6}}</h3>
+<h3>{{name | slice: 6:11}}</h3>
+<h3>{{name | slice}}</h3>
+<h3>{{person | json}}</h3>
+
+<br><br>
+
+<h3>{{5.678 | number: '1.2-3'}}</h3>
+<h3>{{5.678 | number: '3.4-5'}}</h3>
+<h3>{{5.678 | number: '2.1-2'}}</h3>
+
+<br><br>
+
+<h3>{{0.25 | percent}}</h3>
+<h3>{{0.25 | currency: 'INR'}}</h3>
+
+<br><br>
+
+<h3>{{date}}</h3>
+<h3>{{date | date:'short'}}</h3>
+<h3>{{date | date: 'shortDate'}}</h3>
+<h3>{{date | date: 'shortTime'}}</h3>
+<h3>{{date | date: 'medium'}}</h3>
+<h3>{{date | date: 'mediumDate'}}</h3>
+<h3>{{date | date: 'mediumTime'}}</h3>
+<h3>{{date | date: 'long'}}</h3>
+<h3>{{date | date: 'longDate'}}</h3>
+<h3>{{date | date: 'longTime'}}</h3>
+

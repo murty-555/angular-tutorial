@@ -1,0 +1,7 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<h2>All Mobile Names:</h2>
+<h3 [class.selected]="selected(mobile)" *ngFor="let mobile of mobiles" (click)="onSelect(mobile)">
+    {{mobile.model}}
+</h3>
+<h3 *ngIf="errMsg">Oops! {{errMsg}}</h3>

@@ -1,0 +1,20 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>Two way data binding works!</p>
+
+<br>
+
+<input type="text" #name placeholder="Enter your name">
+<input type="text" #domain placeholder="Enter your domain">
+<input type="text" #empid placeholder="Enter your emp id">
+<button mat-flat-button (click)="getMyName(name.value)">Get my name</button>
+<button mat-raised-button (click)="getMyDomain(domain.value)">Get my Domain</button>
+<button mat-stroked-button (click)="getMyEmpid(empid.value)">Get my empid</button>
+<br>
+<h3>{{"My Name : " + myName}}</h3>
+<h3>{{"My Domain : " + myDomain}}</h3>
+<h3>{{"My Emp id : " + myEmpid}}</h3>
+
+<hr>
+<input type="text" [(ngModel)]="myText">
+<h4>{{"Entered text: " + myText}}</h4>

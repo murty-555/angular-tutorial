@@ -1,0 +1,47 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>For Directive works!</p>
+<br>
+<!-- <h3 *ngFor="let mobile of mobiles">{{mobile}}</h3> -->
+<!-- <h3 *ngFor="let mobile of mobiles; index as i">{{i+1}}. {{mobile}}</h3> -->
+<!-- <h3 *ngFor="let mobile of mobiles; even as e">{{mobile}} -- > Even Position: {{e}}</h3> -->
+<!-- <h3 *ngFor="let mobile of mobiles; odd as o">{{mobile}} -- > Odd Position: {{o}}</h3> -->
+<!-- <h3 *ngFor="let emp of empDetails | keyvalue">
+    {{emp.key}} --- > {{emp.value}}
+</h3> -->
+<!-- <h3 *ngFor="let emp of empDetails">
+    {{emp.name}}
+</h3> -->
+
+<h3 *ngFor="let emp of empDetails">
+    <h2 *ngFor="let detail of emp | keyvalue">
+        {{detail.key}} --- > {{detail.value}}
+    </h2>
+    <hr>
+</h3>
+
+<br>
+<br>
+<h3 *ngFor="let x of data; index as i">
+    {{i}} --- > {{x}}
+</h3>
+<br>
+<br>
+<h3 *ngFor="let x of data; first as f">
+    {{f}} --- > {{x}}
+</h3>
+<br>
+<br>
+<h3 *ngFor="let x of data; last as l">
+    {{l}} --- > {{x}}
+</h3>
+<br>
+<br>
+<h3 *ngFor="let x of data; even as e">
+    {{e}} --- > {{x}}
+</h3>
+<br>
+<br>
+<h3 *ngFor="let x of data; odd as o">
+    {{o}} --- > {{x}}
+</h3>

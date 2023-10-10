@@ -1,0 +1,11 @@
+<hr>
+<h2>Child Component!</h2>
+<!-- <h3>{{pPostman}}</h3>
+<button mat-raised-button (click)="sendData()">Click to send data to parent</button> -->
+<h3 *ngFor="let data of pObjPostman | keyvalue">
+    {{data.key}} ---- > {{data.value}}
+</h3>
+<button mat-flat-button color="warn" (click)="onClick()">click to send data to parent</button>
+
+<h5>{{messageFromParent}}</h5>
+<button (click)="onSend()">Msg to parent</button>

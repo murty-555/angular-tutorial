@@ -1,0 +1,16 @@
+h2{
+    text-align: center;
+}
+.mobile{
+    cursor: pointer;
+}
+.buttons-container button{
+    margin: 10px;
+}
+.mobile-image{
+    height: 25vh;
+}
+.mobile-container{
+    display: flex;
+    
+}

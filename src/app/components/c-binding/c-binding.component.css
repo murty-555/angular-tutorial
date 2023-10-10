@@ -1,0 +1,10 @@
+.textColor{
+    color: cadetblue;
+}
+.textSize{
+    font-size: 32px;
+}
+.styleHover:hover{
+    cursor: pointer;
+    color: blue;
+}

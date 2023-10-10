@@ -1,0 +1,14 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>interpolation works!</p>
+<h3>{{name}}</h3>
+<h3>{{name.length}}</h3>
+<h3>{{name.toUpperCase()}}</h3>
+<h3>{{name.toLowerCase()}}</h3>
+<h3>Sum of 10 + 10 = {{10 + 10}}</h3>
+<h3>{{emp.firstName}}</h3>
+<h3>{{emp.lastName ? emp.lastName : 'Last name not available'}}</h3>
+<h3>{{getMyName()}}</h3>
+<!-- Inorder to display object we use pipe and json -->
+<h5>{{empList | json}}</h5>
+<h5>{{empList[1].name}}</h5>

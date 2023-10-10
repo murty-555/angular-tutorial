@@ -1,0 +1,6 @@
+h3{
+    cursor: pointer;
+}
+.selected{
+    color: darkcyan;
+}

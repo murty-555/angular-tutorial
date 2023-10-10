@@ -1,0 +1,47 @@
+<nav>
+  <li><a routerLink="/">Back to home</a></li>
+</nav>
+<br />
+<h2>Mobile Details:</h2>
+<br />
+<hr />
+<!-- <h3 *ngFor="let spec of mobile | keyvalue">
+        {{spec.key}} : {{spec.value}}
+    </h3> -->
+<div *ngFor="let mobile of mobileDetails">
+  <div *ngIf="mobile.id === mobileId" [class]="'mobile-container'">
+    <div>
+      <h3>Model: {{ mobile.model }}</h3>
+      <h3>RAM: {{ mobile.ram }}</h3>
+      <h3>ROM: {{ mobile.rom }}</h3>
+      <h3>Processor: {{ mobile.processor }}</h3>
+    </div>
+    <div>
+      <img
+        [src]="mobile.imageUrl"
+        [class]="'mobile-image'"
+        alt="mobile-image"
+      />
+    </div>
+  </div>
+</div>
+<div class="buttons-container">
+  <button
+    mat-raised-button
+    color="info"
+    (click)="onPrevious()"
+    [disabled]="mobileId === 1"
+  >
+    Prev
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onNext()"
+    [disabled]="mobileId === 5"
+  >
+    Next
+  </button>
+  <button mat-raised-button color="warn" (click)="goBack()">Back</button>
+</div>
+<h3 *ngIf="errMsg">{{ errMsg }}</h3>

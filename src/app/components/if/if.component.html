@@ -1,0 +1,42 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>if directive(structural) works!</p>
+
+<br />
+
+<h3>If Directive</h3>
+<p *ngIf="check">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi architecto
+  error explicabo. Cum dicta voluptas rem! Esse reprehenderit officiis ab illum
+  eius, corrupti, soluta, voluptas harum doloremque laboriosam magnam?
+</p>
+<p *ngIf="check; else elseBlock">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non illo ut aliquam
+  temporibus, sequi fugiat ab suscipit eius nesciunt hic harum ipsam
+  necessitatibus. Blanditiis impedit sequi repellat recusandae, earum provident?
+</p>
+
+<ng-template #elseBlock>
+  <h4>From else block</h4>
+</ng-template>
+
+<h3 *ngIf="check; then tBlock else eBlock"></h3>
+
+<ng-template #tBlock>
+    <h4>From true block</h4>
+</ng-template>
+<ng-template #eBlock>
+    <h4>From else block</h4>
+</ng-template>
+
+<br>
+<h3 *ngIf="status; then trueResult else FalseResult"></h3>
+
+<ng-template #trueResult>
+  <h3>True Result</h3>
+</ng-template>
+
+<ng-template #FalseResult>
+  <h3>Else Result</h3>
+</ng-template>
+

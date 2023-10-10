@@ -1,0 +1,13 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<p>switch works!</p>
+<br>
+<h3 [ngSwitch]="myCase">
+    <h4 *ngSwitchCase="'one'">Monday</h4>
+    <h4 *ngSwitchCase="'two'">Tuesday</h4>
+    <h4 *ngSwitchCase="'three'">Wednesday</h4>
+    <h4 *ngSwitchCase="'four'">Thursday</h4>
+    <h4 *ngSwitchCase="'five'">Friday</h4>
+    <h4 *ngSwitchCase="'six'">Saturday</h4>
+    <h4 *ngSwitchDefault="">Saturday</h4>
+</h3>

@@ -1,0 +1,8 @@
+<nav><li><a routerLink="/">Back to home</a></li></nav>
+<br>
+<h2>template reference variable works!</h2>
+<br>
+<input #msg type="text" placeholder="Enter your message!">
+<button mat-flat-button (click)="message(msg.value)">Click me</button>
+<h3>{{messageValue}}</h3>
+
