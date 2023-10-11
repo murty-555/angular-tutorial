@@ -12,5 +12,9 @@ h2{
 }
 .mobile-container{
     display: flex;
-    
+    justify-content: space-between;
+    padding: 20px;
+}
+.mobile-detail-container{
+    display: flex;
 }

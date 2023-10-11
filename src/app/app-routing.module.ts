@@ -16,12 +16,20 @@ import { MobileNameComponent } from './components/mobile-name/mobile-name.compon
 import { MobileDetailsComponent } from './components/mobile-details/mobile-details.component';
 import { TemRefVariableComponent } from './components/tem-ref-variable/tem-ref-variable.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { MobileInDetailComponent } from './components/mobile-in-detail/mobile-in-detail.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { adminAccessGuard } from './admin-access.guard';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'admin',
+    component: AdminHomeComponent,
+    canActivate: [adminAccessGuard]
   },
   {
     path: 'home',
@@ -73,7 +81,13 @@ const routes: Routes = [
   },
   {
     path: 'mobiles/:id',
-    component: MobileDetailsComponent
+    component: MobileDetailsComponent,
+    children: [
+      {
+        path: 'full-details',
+        component: MobileInDetailComponent
+      }
+    ]
   },
   {
     path: 'tempRefVar',
@@ -83,6 +97,7 @@ const routes: Routes = [
     path: 'pipes',
     component: PipesComponent
   },
+  { path: 'lazyLoading', loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
   {
     path: '**',
     component: PageNotFoundComponent

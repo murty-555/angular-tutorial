@@ -10,6 +10,7 @@
     </h3> -->
 <div *ngFor="let mobile of mobileDetails">
   <div *ngIf="mobile.id === mobileId" [class]="'mobile-container'">
+    <div class="mobile-detail-container">
     <div>
       <h3>Model: {{ mobile.model }}</h3>
       <h3>RAM: {{ mobile.ram }}</h3>
@@ -22,6 +23,10 @@
         [class]="'mobile-image'"
         alt="mobile-image"
       />
+    </div>
+  </div>
+    <div class="mobile-review-container">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
@@ -43,5 +48,7 @@
     Next
   </button>
   <button mat-raised-button color="warn" (click)="goBack()">Back</button>
+  <button mat-raised-button color="accent" (click)="showReviews()">Reviews</button>
 </div>
 <h3 *ngIf="errMsg">{{ errMsg }}</h3>
+

@@ -41,5 +41,8 @@ export class MobileDetailsComponent implements OnInit {
     let selectedId = this.mobileId;
     this._router.navigate(['../', {id: selectedId}], {relativeTo: this._activatedRoute})
   }
+  showReviews(){
+    this._router.navigate(['full-details'], {relativeTo:this._activatedRoute})
+  }
   
 }

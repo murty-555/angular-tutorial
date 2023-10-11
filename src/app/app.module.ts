@@ -24,7 +24,9 @@ import { MobileDetailsComponent } from './components/mobile-details/mobile-detai
 import { TemRefVariableComponent } from './components/tem-ref-variable/tem-ref-variable.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { MobilesService } from './services/mobiles.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { MobileInDetailComponent } from './components/mobile-in-detail/mobile-in-detail.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import {HttpClientModule} from '@angular/common/http'
     MobileNameComponent,
     MobileDetailsComponent,
     TemRefVariableComponent,
-    PipesComponent
+    PipesComponent,
+    MobileInDetailComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
