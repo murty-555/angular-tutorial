@@ -17,4 +17,7 @@ ul li:hover{
 .active{
     color: darkcyan;
 }
-
+h2{
+    text-align: center;
+    margin: 20px;
+}

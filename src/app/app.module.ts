@@ -26,7 +26,10 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { MobilesService } from './services/mobiles.service';
 import {HttpClientModule} from '@angular/common/http';
 import { MobileInDetailComponent } from './components/mobile-in-detail/mobile-in-detail.component';
-import { AdminHomeComponent } from './components/admin-home/admin-home.component'
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { SpaceToHyphenPipe } from './pipes/space-to-hyphen.pipe'
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
     TemRefVariableComponent,
     PipesComponent,
     MobileInDetailComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    FormsComponent,
+    SpaceToHyphenPipe
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MobilesService],
   bootstrap: [AppComponent]

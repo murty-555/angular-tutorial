@@ -1,8 +1,8 @@
 <h2>List of topics:</h2>
 
 <ul>
-  <li routerLink="/interpolation"routerLinkActive="active"><h3>Interpolation</h3></li>
-  <li routerLink="/class-binding"><h3 >Class binding</h3></li>
+  <li *ngFor="let each of concepts" routerLink="/{{each.title | spaceToHyphen}}"><h3>{{each.title | titlecase}}</h3></li>
+  <!-- <li routerLink="/class-binding"><h3 >class binding</h3></li>
   <li routerLink="/property-binding"><h3>Property binding</h3></li>
   <li routerLink="/style-binding"><h3>Style binding</h3></li>
   <li routerLink="/event-binding"><h3>Event binding</h3></li>
@@ -14,4 +14,5 @@
   <li routerLink="/compCom"><h3>Component communication</h3></li>
   <li routerLink="/pipes"><h3>Pipes</h3></li>
   <li routerLink="/mobiles"><h3>Mobiles</h3></li>
+  <li routerLink="/forms"><h3>Angular Forms</h3></li> -->
 </ul>

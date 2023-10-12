@@ -19,6 +19,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { MobileInDetailComponent } from './components/mobile-in-detail/mobile-in-detail.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { adminAccessGuard } from './admin-access.guard';
+import { FormsComponent } from './components/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
     path: 'admin',
     component: AdminHomeComponent,
     canActivate: [adminAccessGuard]
+  },
+  {
+    path: 'angular-forms',
+    component: FormsComponent
   },
   {
     path: 'home',
@@ -56,23 +61,23 @@ const routes: Routes = [
     component: EBindingComponent
   },
   {
-    path: 'twd-binding',
+    path: 'two-way-data-binding',
     component: TwBindingComponent
   },
   {
-    path: 'if',
+    path: 'if-directive',
     component: IfComponent
   },
   {
-    path: 'for',
+    path: 'for-directive',
     component: ForComponent
   },
   {
-    path: 'switch',
+    path: 'switch-directive',
     component: SwitchComponent
   },
   {
-    path: 'compCom',
+    path: 'component-communication',
     component: ParentComponent
   },
   {
@@ -90,7 +95,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'tempRefVar',
+    path: 'template-reference-variable',
     component: TemRefVariableComponent
   },
   {
