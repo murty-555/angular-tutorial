@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/user';
 
 @Component({
   selector: 'app-forms',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class FormsComponent {
   public demoResult;
+  public locations = ["Pune", "Bangalore", "Chennai"]
+  userModel = new User('','ghana@gmail.com','Pune',false)
 }

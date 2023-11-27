@@ -28,7 +28,16 @@
 <!-- <app-for></app-for> -->
 
 <!-- <app-parent></app-parent> -->
-<h1>Hello, welcome to angular tutorial</h1>
+<div class="container-fluid">
+  <div [ngClass]="darkMode ? 'container dark-mode' : 'container normal-mode'">
+    <h1>Hello, welcome to angular tutorial</h1>
+    <div class="theme-button">
+      <mat-slide-toggle [(ngModel)]="darkMode" class="toggle-button">Dark mode</mat-slide-toggle>
+    </div>
+    <hr />
+    <router-outlet></router-outlet>
+  </div>
+</div>
 <!-- <nav>
   <ul>
     <li><h5 routerLink="/for" routerLinkActive="active">ngFor</h5></li>
@@ -36,6 +45,3 @@
     <li><h5 routerLink="/switch" routerLinkActive="active">ngSwitch</h5></li>
   </ul>
 </nav> -->
-<hr />
-
-<router-outlet></router-outlet>

@@ -1,34 +1,87 @@
+<nav>
+  <li><a routerLink="/">Back to home</a></li>
+</nav>
+<br />
 <h2>Angular Forms (Template Driven Forms)</h2>
-<input type="text" [(ngModel)]="demoResult">
-<h4>{{demoResult}}</h4>
+<!-- <input type="text" [(ngModel)]="demoResult">
+<h4>{{demoResult}}</h4> -->
 
-<form #myForm="ngForm">
+<form #myForm="ngForm" class="form">
+  <div class="col-6">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="username" ngModel>
+      <input
+        type="text"
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+        class="form-control"
+        id="name"
+        name="username"
+        [(ngModel)]="userModel.name"
+        required
+      />
+      <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required!</small>
+      <!-- <div class="details-container">
+        {{ name.pristine }}
+      </div> -->
       <div id="uname" class="form-text">Enter you name here.</div>
     </div>
-    <div class="mb-3">
+    <div class="col-6 mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  ngModel>
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <input
+        type="email"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        class="form-control"
+        name="email"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        [(ngModel)]="userModel.email"
+        required
+      />
+      <div *ngIf="email.errors && (email.invalid || email.touched)">
+        <small class="text-danger" *ngIf="email.errors.required">Email is required!</small>
+        <small class="text-danger" *ngIf="email.errors.pattern">Invalid email!</small>
+      </div>
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
     </div>
-    <div class="mb-3">
+    <div class="col-6 mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" id="exampleInputPassword1" />
     </div>
-    <div>Willing to relocate:</div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Yes
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          No
-        </label>
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <div class="col-6 mb-3">
+      <label for="preferredLocation" class="form-label">Preferred Location:</label>
+      <select class="form-select" [(ngModel)]="userModel.location" name="location">
+        <option value="" selected>Select location</option>
+        <option value="" *ngFor="let loc of locations">{{loc}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="mb-3">
+      <label class="form-label" for="flexCheckChecked">
+        Willing to relocate!
+      </label>
+      <input
+        class=""
+        type="checkbox"
+        value=""
+        id="flexCheckChecked"
+        name="relocate"
+        [(ngModel)]="userModel.relocate"
+        checked
+      />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br />
+<div class="details-container" *ngIf="myForm.value">
+  {{ myForm.value | json }}
+</div>
+<div class="details-container" *ngIf="myForm.value">
+  {{ userModel | json }}
+</div>

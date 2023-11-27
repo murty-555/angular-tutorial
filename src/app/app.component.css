@@ -1,3 +1,11 @@
+.container-fluid{
+    background-color: darkslategray;
+    /* height: 100%; */
+}
+.container{
+    height: 100%;
+    position: relative;
+}
 h1{
     text-align: center;
 }
@@ -7,3 +15,24 @@ h1{
 h5{
     cursor: pointer;
 } */
+.theme-button{
+    /* color: white; */
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+.toggle-button{
+    color: white !important;
+}
+.dark-mode{
+    background-color: black !important;
+}
+.dark-mode h1, hr{
+    color: white !important;
+}
+.normal-mode{
+    background-color: white !important;
+}
+.normal-mode h1, hr{
+    color: black !important;
+}

@@ -11,4 +11,4 @@ export class SpaceToHyphenPipe implements PipeTransform {
 
 }
 
-// <p> class binding | spaceToHyphen</>
+// <p> class binding | spaceToHyphen sm-g990b  sm8350</>
